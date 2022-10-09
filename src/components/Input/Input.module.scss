@@ -1,0 +1,126 @@
+.component {
+  min-height: 75px;
+
+  &_error {
+    .block {
+      border-color: var(--color-error);
+
+      &:hover {
+        border-color: var(--color-error);
+      }
+
+      .label {
+        color: var(--color-error);
+      }
+
+      &_focus {
+        box-shadow: 0 0 3px 0 var(--color-error);
+      }
+    }
+  }
+}
+
+.block {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 56px;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: var(--color-white);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  &_focus {
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px var(--color-focus-border);
+
+    &:hover {
+      border-color: var(--color-border-focus);
+    }
+  }
+
+  .label {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    color: var(--color-disabled);
+    transition: 0.3s;
+
+    &_focus {
+      top: 8px;
+      transform: translateY(0);
+      color: var(--color-border-focus);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    &_active {
+      color: var(--color-text-additional);
+    }
+  }
+
+  .input {
+    border: none;
+    outline: none;
+    width: calc(100% - 30px);
+    height: 24px;
+    font-size: 16px;
+    color: var(--main-color);
+    caret-color: var(--color-border-focus);
+
+    &_capitalize {
+      text-transform: capitalize;
+    }
+
+    &::placeholder {
+      color: var(--color-disabled);
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active  {
+      box-shadow: 0 0 0 30px white inset !important;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    fill: var(--color-disabled);
+
+    &:hover {
+      fill: var(--color-text-additional);
+    }
+
+    &_hide {
+      display: none;
+    }
+  }
+}
+
+.error-text {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--color-error);
+  margin-top: 3px;
+  word-break: break-all;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}

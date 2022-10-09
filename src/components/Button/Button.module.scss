@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &_primary {
+    background: var(--bg-button-primary);
+    color: var(--color-white);
+    border: none;
+
+    &:hover {
+      background: var(--bg-button-hover);
+    }
+
+    &:focus {
+      outline: 3px solid rgba(0, 114, 255, 0.4);
+    }
+
+    &:active {
+      background: var(--main-color);
+    }
+  }
+}

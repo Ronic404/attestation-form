@@ -1,0 +1,23 @@
+:root {
+  --main-color: #0D1F60;
+  --bg-color: #F5F8FE;
+  --bg-button-primary: #1E65E2;
+  --bg-button-hover: #3B79E4;
+  --color-error: #FF1100;
+  --color-border: #EDEFF6;
+  --color-border-hover: #DCE0ED;
+  --color-border-focus: #1E65E2;
+  --color-disabled: #B6BBCF;
+  --color-text-additional: #5373AE;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: var(--main-color);
+}
