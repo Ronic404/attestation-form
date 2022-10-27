@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
     'plugin:react/jsx-runtime',
   ],
   overrides: [
@@ -13,6 +14,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: [
     'react',
@@ -26,6 +28,15 @@ module.exports = {
     'jsx-a11y/tabindex-no-positive': 0,
     'react/jsx-closing-tag-location': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/jsx-wrap-multilines': 0,
+    'react/jsx-curly-newline': 0,
+    'react/button-has-type': 0,
+    'max-len': ["error", { "code": 120 }],
+    'react/require-default-props': 0,
+    'operator-linebreak': 0,
+    'prefer-destructuring': 0,
+    '@typescript-eslint/semi': 0,
+    '@typescript-eslint/no-shadow': 0,
     'no-unused-vars': 1,
   },
 };

@@ -1,13 +1,16 @@
+import { ChangeEvent } from 'react'
+
 const regex = /^\+7 \(\d{1,3}\) \d{1,3}-\d{1,2}-\d{1,2}$/
 
-export function phoneMask(event, refInput) {
+export function phoneMask(event: ChangeEvent<HTMLInputElement>, refInput: React.RefObject<HTMLInputElement>): string {
   let digits = event.target.value.replace(/\D/g, '')
   let formattedValue = '+7'
-  const { selectionStart } = refInput.current
+  const { selectionStart } = refInput.current!
 
   if (!digits) return ''
 
   if (event.target.value.length !== selectionStart) {
+    // @ts-ignore
     const { data } = event.nativeEvent
     if (!data) {
       return event.target.value
@@ -25,7 +28,7 @@ export function phoneMask(event, refInput) {
 
   if (['1', '2', '7'].includes(digits[1])) {
     const arr = digits.split('')
-    arr[1] = '9'
+    arr[1] = ''
     digits = arr.join('')
   }
 
