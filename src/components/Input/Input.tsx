@@ -41,14 +41,7 @@ function Input(props: IInputProps) {
   const [_, setIsTooLong] = useState<boolean>(false);
   const [isBlockFocused, setIsBlockFocused] = useState<boolean>(false);
   const [isLabelFocused, setIsLabelFocused] = useState<boolean>(false);
-  // const [inputType, setInputType] = useState(type);
   const refInput = useRef<HTMLInputElement>(null);
-
-  // useEffect(() => {
-  //   if (type === 'date') {
-  //     setInputType('text');
-  //   }
-  // }, []);
 
   useEffect(() => {
     if (value) {
@@ -87,17 +80,8 @@ function Input(props: IInputProps) {
     onChange(value)
   }
 
-  const handleFocusInput = (): void => {
-    // if (type === 'date') {
-    //   setInputType('date');
-    // }
-  }
-
   const handleBlurInput = (): void => {
     onBlur?.()
-    // if (type === 'date' && !value) {
-    //   setInputType('text');
-    // }
   }
 
   return (
@@ -124,7 +108,6 @@ function Input(props: IInputProps) {
           placeholder={isBlockFocused && placeholder ? placeholder : ''}
           max={type === 'date' ? '9999-01-01' : undefined}
           onChange={handleChangeInput}
-          onFocus={handleFocusInput}
           onBlur={handleBlurInput}
         />
         <CrossIcon className={cx('icon', { icon_hide: !isBlockFocused })} onClick={() => onChange('')} role="button" />
