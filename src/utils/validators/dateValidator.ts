@@ -6,7 +6,7 @@ interface IDate {
 export const dateValidator = (
   minDate: IDate | null,
   maxDate: IDate | null,
-  error: string,
+  error?: string,
 ) => (value: string): string => {
   const [curD, curM, curY] = value.trim().split('.')
   const current = +new Date(+curY, +curM - 1, +curD)
