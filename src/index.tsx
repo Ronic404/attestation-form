@@ -4,7 +4,7 @@ import 'normalize.css';
 
 import App from './components/App';
 
-import './styles/global.css';
+import './styles/global.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(

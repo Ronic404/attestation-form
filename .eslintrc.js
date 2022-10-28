@@ -1,24 +1,16 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'airbnb-typescript',
-    'plugin:react/jsx-runtime',
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'airbnb-typescript', 'plugin:react/jsx-runtime', 'plugin:storybook/recommended'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: './tsconfig.json'
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
     semi: 0,
     'no-shadow': 0,
@@ -31,12 +23,26 @@ module.exports = {
     'react/jsx-wrap-multilines': 0,
     'react/jsx-curly-newline': 0,
     'react/button-has-type': 0,
-    'max-len': ["error", { "code": 120 }],
+    'react/function-component-definition': 0,
+    'react/jsx-props-no-spreading': 0,
+    'max-len': ['error', {
+      'code': 120
+    }],
     'react/require-default-props': 0,
     'operator-linebreak': 0,
     'prefer-destructuring': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/no-shadow': 0,
     'no-unused-vars': 1,
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        'devDependencies': [
+          '**/*.stories.*',
+          '**/.storybook/**/*.*'
+        ],
+        'peerDependencies': true
+      },
+    ],
   },
 };

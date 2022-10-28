@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onBlur'>
 
-interface IInputProps extends HTMLInputProps {
+export interface IInputProps extends HTMLInputProps {
   label: string
   error?: string
   capitalize?: boolean

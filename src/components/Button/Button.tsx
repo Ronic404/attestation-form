@@ -5,11 +5,11 @@ import styles from './Button.module.scss'
 
 const cx = classNames.bind(styles);
 
-interface IInputProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: 'primary' | 'secondary'
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  color?: 'primary' | 'default'
 }
 
-function Button(props: IInputProps) {
+function Button(props: IButtonProps) {
   const {
     className,
     children,
