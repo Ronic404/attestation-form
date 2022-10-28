@@ -30,6 +30,11 @@ WithoutText.args = {}
 export const WithText = TemplateWithText.bind({});
 WithText.args = {}
 
+export const WithPlaceholder = TemplateWithoutText.bind({});
+WithPlaceholder.args = {
+  placeholder: 'Введите текст',
+}
+
 export const WithoutTextError = TemplateWithoutText.bind({});
 WithoutTextError.args = {
   error: 'Ошибка',
@@ -43,4 +48,9 @@ Error.args = {
 export const PhoneMask = TemplateWithoutText.bind({});
 PhoneMask.args = {
   mask: phoneMask,
+}
+
+export const MaxLength10 = TemplateWithoutText.bind({});
+MaxLength10.args = {
+  maxLength: 10,
 }
