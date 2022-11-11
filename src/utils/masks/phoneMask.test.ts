@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react'
-import { dateMask } from './dateMask'
+import { phoneMask } from './phoneMask'
 
 describe('dateMask should', () => {
   const refInput = {
     current: {
-      selectionStart: 8,
+      selectionStart: 11,
     },
   } as React.RefObject<HTMLInputElement>
 
@@ -18,13 +18,13 @@ describe('dateMask should', () => {
     },
   } as ChangeEvent<HTMLInputElement>
 
-  test('return date', () => {
-    event.target.value = '11112022'
-    expect(dateMask(event, refInput)).toBe('11.11.2022')
+  test('return phone number', () => {
+    event.target.value = '89124479955'
+    expect(phoneMask(event, refInput)).toBe('+7 (912) 447-99-55')
   })
 
   test('return empty string', () => {
-    event.target.value = 'datedate'
-    expect(dateMask(event, refInput)).toBe('')
+    event.target.value = 'phonenumber'
+    expect(phoneMask(event, refInput)).toBe('')
   })
 })
