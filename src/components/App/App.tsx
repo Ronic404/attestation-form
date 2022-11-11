@@ -6,7 +6,7 @@ import Button from '../Button';
 
 import { useInput } from '../../hooks/useInput';
 
-import { getDate } from '../../utils/getDate';
+import { getDate } from '../../utils/getDate/getDate';
 import { dateMask, nameMask, phoneMask } from '../../utils/masks';
 import { regexValidator, requireValidator, dateValidator } from '../../utils/validators';
 

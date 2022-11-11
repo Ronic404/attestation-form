@@ -1,3 +1,3 @@
-export { dateMask } from './dateMask';
-export { nameMask } from './nameMask';
-export { phoneMask } from './phoneMask';
+export { dateMask } from './dateMask/dateMask';
+export { nameMask } from './nameMask/nameMask';
+export { phoneMask } from './phoneMask/phoneMask';

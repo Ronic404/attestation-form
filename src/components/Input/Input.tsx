@@ -3,7 +3,7 @@ import {
 } from 'react';
 import classNames from 'classnames/bind';
 
-import { capitalizeText } from '../../utils/capitalizeText';
+import { capitalizeText } from '../../utils/capitalizeText/capitalizeText';
 
 import { ReactComponent as CrossIcon } from '../../assets/icons/Cross.svg';
 

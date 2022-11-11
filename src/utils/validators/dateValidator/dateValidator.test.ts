@@ -1,4 +1,4 @@
-import { getDate } from '../getDate'
+import { getDate } from '../../getDate/getDate'
 import { dateValidator } from './dateValidator'
 
 // Two dates
