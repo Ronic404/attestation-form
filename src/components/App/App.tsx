@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Input from '../Input';
 import Button from '../Button';
 
-import { useInput } from '../../hooks/useInput';
+import { useInput } from '../../hooks/useInput/useInput';
 
 import { getDate } from '../../utils/getDate/getDate';
 import { dateMask, nameMask, phoneMask } from '../../utils/masks';

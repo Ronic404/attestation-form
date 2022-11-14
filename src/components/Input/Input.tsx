@@ -85,7 +85,7 @@ function Input(props: IInputProps) {
   }
 
   return (
-    <div className={cx('component', className, { component_error: error })}>
+    <div className={cx('component', className, { component_error: error })} data-testid="inputWrapper">
       <div
         className={cx('block', { block_focus: isBlockFocused })}
         onFocus={handleFocusBlock}
@@ -109,6 +109,7 @@ function Input(props: IInputProps) {
           max={type === 'date' ? '9999-01-01' : undefined}
           onChange={handleChangeInput}
           onBlur={handleBlurInput}
+          data-testid="input"
         />
         <CrossIcon className={cx('icon', { icon_hide: !isBlockFocused })} onClick={() => onChange('')} role="button" />
       </div>
